@@ -11,7 +11,7 @@ export default new Router({
       path: '/',
       name: 'ActivityList',
       component: ActivityList
-    },
+    }
     // {
     //   path: '/hello',
     //   name: 'Hello',
