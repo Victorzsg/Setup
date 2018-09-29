@@ -12,10 +12,10 @@
 </script>
 
 <style lang="scss">
-    #app{
+    #app {
         min-width: 1200px;
         margin: 0 auto;
-        font-family: "Helvetica Neue","PingFang SC",Arial,sans-serif;
+        font-family: "Helvetica Neue", "PingFang SC", Arial, sans-serif;
     }
 
     .login-dialog {

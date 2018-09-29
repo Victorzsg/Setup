@@ -9,6 +9,7 @@
 <script>
     import setup_headers from '../../components/headers'
     import search_bar from '../../components/search-bar'
+
     export default {
         name: "activity-list",
         components: {search_bar, setup_headers},

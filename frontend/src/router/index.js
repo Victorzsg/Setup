@@ -6,16 +6,16 @@ import ActivityList from '@/pages/activity-list'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'ActivityList',
-      component: ActivityList
-    }
-    // {
-    //   path: '/hello',
-    //   name: 'Hello',
-    //   component: Hello
-    // }
-  ]
+    routes: [
+        {
+            path: '/',
+            name: 'ActivityList',
+            component: ActivityList
+        }
+        // {
+        //   path: '/hello',
+        //   name: 'Hello',
+        //   component: Hello
+        // }
+    ]
 })
