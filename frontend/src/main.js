@@ -11,6 +11,14 @@ Vue.use(ElementUI)
 
 Vue.config.productionTip = false
 
+import {API, getJson, postJson} from './service/api'
+
+Vue.use(Vue => {
+    Vue.prototype.$API = API
+    Vue.prototype.$getJson = getJson
+    Vue.prototype.$postJson = postJson
+})
+
 /* eslint-disable */
 new Vue({
     el: '#app',

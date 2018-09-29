@@ -35,6 +35,13 @@
 
         methods: {
             visibleDialog() {
+                this.$API({
+                    url: "http://my_acms.com"
+                }).then(s => {
+                    console.log(s)
+                }, s => {
+                    console.log(s)
+                })
                 this.$emit('update:createDialogVisible', true)
                 this.$emit('evDefaultFormCB')
             },

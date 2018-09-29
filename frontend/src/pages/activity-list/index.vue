@@ -1,7 +1,8 @@
 <template>
     <div class="activity-list">
         <setup_headers></setup_headers>
-        <search_bar name="活动列表" leftBtnName="新建活动">
+        <search_bar name="活动列表"
+                    leftBtnName="新建活动">
         </search_bar>
     </div>
 </template>
