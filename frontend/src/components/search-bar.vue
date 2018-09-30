@@ -1,11 +1,51 @@
 <template>
-    <div activity-search-bar>
+    <div class="activity-search-bar">
         <el-row>
-            <el-col>
+            <el-col :span="6">
                 <div class="activity-search-bar-left">
                     <p>{{name}}</p>
                     <el-button type="primary" @click="visibleDialog">{{leftBtnName}}</el-button>
                 </div>
+            </el-col>
+
+            <el-col :span="18"
+                    v-show="seniorSearch">
+                <div class="activity-search-bar-right">
+                    <el-form ref="form" label-width="100px">
+                        <el-row>
+                            <el-col :span="10">
+                                <el-form-item label="活动名称/id：">
+                                    <el-input placeholder="仅用在活动系统" v-model="searchData.id_or_name"
+                                              @keyup.native.enter="search"></el-input>
+                                </el-form-item>
+                            </el-col>
+                            <el-col :span="10">
+                                <el-form-item label="页面ID：">
+                                    <el-input placeholder="仅用在活动系统" v-model="searchData.page_id"
+                                              @keyup.native.enter="search"></el-input>
+                                </el-form-item>
+                            </el-col>
+                            <el-col :span="4">
+                                <el-button class="el-button el-button--default fr" @click="search">搜索</el-button>
+                            </el-col>
+                        </el-row>
+                    </el-form>
+                </div>
+            </el-col>
+
+            <el-col :span="hasSeniorSearch ? 16 : 18"
+                    v-show="!seniorSearch">
+                <div class="activity-search-bar-right">
+                    <el-input :placeholder="searchPlaceholder" v-model="searchData.id_or_name" class="input-with-select"
+                              @keyup.native.enter="search">
+                        <el-button slot="append" icon="el-icon-search" @click="search"></el-button>
+                    </el-input>
+                </div>
+            </el-col>
+            <el-col :span="2" v-if="hasSeniorSearch">
+                <el-button class="el-button el-button--default fr" v-show="!seniorSearch"
+                           @click="seniorSearch = !seniorSearch">高级搜索
+                </el-button>
             </el-col>
         </el-row>
     </div>
@@ -20,7 +60,7 @@
             leftBtnName: String,
             searchPlaceholder: {
                 type: String,
-                default: '输入专题名称 或 ID'
+                default: '输入活动名称 或 ID'
             },
             createDialogVisible: {
                 type: Boolean,
@@ -32,6 +72,17 @@
             }
         },
         components: {},
+
+        data() {
+            return {
+                seniorSearch: false,
+                searchData: {
+                    // spacial_id: '1',
+                    page_id: '',
+                    id_or_name: ''
+                }
+            }
+        },
 
         methods: {
             visibleDialog() {

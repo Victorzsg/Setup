@@ -4,34 +4,34 @@ export default {
         url: '/index.php?c=RejectMsg&a=postRejectMsg',
         mock: false
     },
-    // 获取专题首页列表
-    getSpecialList: {
-        url: '/special/list',
+    // 获取活动首页列表
+    getActivityList: {
+        url: '/activity/list',
         mock: false
     },
-    // 获取专题分类列表
-    getSpecialCateList: {
-        url: '/specialcate/list',
+    // 获取活动分类列表
+    getActivityCateList: {
+        url: '/ActivityCate/list',
         mock: false
     },
-    // 创建专题分类
-    specialCateCreate: {
-        url: '/specialcate/create',
+    // 创建活动分类
+    ActivityCateCreate: {
+        url: '/ActivityCate/create',
         mock: false
     },
-    // 删除专题分类
-    specialCateDestroy: {
-        url: '/specialcate/destroy',
+    // 删除活动分类
+    ActivityCateDestroy: {
+        url: '/ActivityCate/destroy',
         mock: false
     },
-    // 更新专题分类
-    specialCateUpdate: {
-        url: '/specialcate/update',
+    // 更新活动分类
+    activityCateUpdate: {
+        url: '/activitycate/update',
         mock: false
     },
-    // 获取单个专题分类
-    specialCateShow: {
-        url: '/specialcate/show',
+    // 获取单个活动分类
+    activityCateShow: {
+        url: '/activitycate/show',
         mock: false
     },
     // 获取部类列表
@@ -39,24 +39,24 @@ export default {
         url: '/department/list',
         mock: false
     },
-    // 创建专题
+    // 创建活动
     specialCreate: {
-        url: '/special/create',
+        url: '/activity/create',
         mock: false
     },
-    // 更新专题
+    // 更新活动
     specialUpdate: {
-        url: '/special/update',
+        url: '/activity/update',
         mock: false
     },
-    // 搜索专题
+    // 搜索活动
     specialSearch: {
-        url: '/special/search',
+        url: '/activity/search',
         mock: false
     },
-    // 发布专题
+    // 发布活动
     specialRelease: {
-        url: '/special/release',
+        url: '/activity/release',
         mock: false
     },
     // 获取入口图
@@ -81,17 +81,17 @@ export default {
     },
     // 导出URL
     specialExporturls: {
-        url: '/special/exporturls',
+        url: '/activity/exporturls',
         mock: false
     },
-    // 获取专题发布状态
+    // 获取活动发布状态
     specialReleasestatus: {
-        url: '/special/releasestatus',
+        url: '/activity/releasestatus',
         mock: false
     },
-    // 获取单个专题数据
+    // 获取单个活动数据
     getSpecialShow: {
-        url: '/special/show',
+        url: '/activity/show',
         mock: false
     },
     // 搜索页面模板
@@ -134,7 +134,7 @@ export default {
         url: '/pagetpl/update',
         mock: false
     },
-    // 获取专题子页面列表
+    // 获取活动子页面列表
     getChildpageList: {
         url: '/childpage/list',
         mock: false
@@ -259,7 +259,6 @@ export default {
         url: '/upload/saveimg',
         mock: false
     },
-    // 创建子页面 http://wiki.corp.vipshop.com/pages/viewpage.action?pageId=396562143
     createChildPage: {
         url: '/childpage/create',
         mock: false
@@ -274,7 +273,6 @@ export default {
         url: '/childpage/attredit',
         mock: false
     },
-    // http://wiki.corp.vipshop.com/pages/viewpage.action?pageId=431266903
     // 批量编辑子页面投放属性
     childPageBatchattredit: {
         url: '/childpage/batchattredit',
@@ -300,7 +298,6 @@ export default {
         url: '/componentmenu/list',
         mock: false
     },
-    // 获取样式列表 http://wiki.corp.vipshop.com/pages/viewpage.action?pageId=397345860
     // 获取单个组件菜单
     getCompMenuShow: {
         url: '/componentmenu/show',
@@ -320,12 +317,10 @@ export default {
         url: '/style/list',
         mock: false
     },
-    // 上传图片 http://wiki.corp.vipshop.com/pages/viewpage.action?pageId=405836158
     uploadImg: {
         url: '/upload/saveimg',
         mock: false
     },
-    // http://wiki.corp.vipshop.com/pages/viewpage.action?pageId=432048581
     importExcel: {
         url: '/upload/saveexcel',
         mock: false
@@ -334,22 +329,18 @@ export default {
         url: '/data/saveoption',
         mock: false
     },
-    // http://wiki.corp.vipshop.com/pages/viewpage.action?pageId=407214860
     getPeopleGroupList: {
         url: '/grouprule/list',
         mock: false
     },
-    // http://wiki.corp.vipshop.com/pages/viewpage.action?pageId=428773201
     getMembershipGrades: {
         url: '/grouprule/consumertypes',
         mock: false
     },
-    // http://wiki.corp.vipshop.com/pages/viewpage.action?pageId=428772342
     getWarehouseList: {
         url: '/warehouse/list',
         mock: false
     },
-    // 获取单个页面模板 http://wiki.corp.vipshop.com/pages/viewpage.action?pageId=398727250
     getPageTemplate: {
         url: '/pagetpl/show/{id}',
         mock: false

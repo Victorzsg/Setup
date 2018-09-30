@@ -6,16 +6,24 @@
 </template>
 
 <script>
-    export default {
-        name: 'App'
-    }
+import 'jquery'
+import 'bootstrap'
+
+export default {
+    name: 'App'
+}
 </script>
 
 <style lang="scss">
     #app {
-        min-width: 1200px;
-        margin: 0 auto;
-        font-family: "Helvetica Neue", "PingFang SC", Arial, sans-serif;
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #2c3e50;
+    }
+
+    body {
+        margin: 0
     }
 
     .login-dialog {

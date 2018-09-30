@@ -5,8 +5,6 @@ const ADD = path
 class UrlMap {
     // 构造函数
     constructor() {
-        // this.root = 'http://mst-nova.vip.com'
-        // this.root = process.env.DEFAULT_API_ROOT
         this.root = location.href.indexOf('&debug=1') !== -1
             ? 'http://localhost:12306' : (process.env.DEFAULT_API_ROOT || '')
     }

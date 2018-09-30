@@ -22,7 +22,27 @@ const createLintingRule = () => ({
 module.exports = {
     context: path.resolve(__dirname, '../'),
     entry: {
-        app: './src/main.js'
+        app: './src/main.js',
+        vendor: [
+            "ajv",
+            "ajv-errors",
+            "axios",
+            "bootstrap",
+            "deep-extend",
+            "element-ui",
+            "interactjs",
+            "jquery",
+            "lodash-es",
+            "merge-images",
+            "popper.js",
+            "v-clipboard",
+            "vue",
+            "vue-bus",
+            "vue-router",
+            "vuedraggable",
+            "vuejs-datepicker",
+            "vuex"
+        ]
     },
     output: {
         path: config.build.assetsRoot,
@@ -42,9 +62,9 @@ module.exports = {
         rules: [
             // ...(config.dev.useEslint ? [createLintingRule()] : []),
             {
-              test: /\.vue$/,
-              loader: 'vue-loader',
-              options: vueLoaderConfig
+                test: /\.vue$/,
+                loader: 'vue-loader',
+                options: vueLoaderConfig
             },
             {
                 test: /\.js$/,
