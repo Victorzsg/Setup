@@ -11,6 +11,9 @@ func main() {
 
 	//read system environment variable【prod,test,dev】
 	mode := os.Getenv("ACTIVITY_MODE")
+	if mode == "" {
+		os.Setenv("ACTIVITY_MODE", "test")
+	}
 
 	if strings.EqualFold("prod", mode) {
 		gin.SetMode(gin.DebugMode)

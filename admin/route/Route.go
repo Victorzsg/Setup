@@ -8,6 +8,6 @@ import (
 
 func registerRouter(route *gin.Engine) {
 
-	route.GET("/users", usercontroller.Test)
-	route.GET("/activity", activitycontroller.GetList)
+	route.GET("/users", user.Test)
+	route.GET("/activity", activity.GetList)
 }

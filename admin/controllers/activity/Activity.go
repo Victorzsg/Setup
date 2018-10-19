@@ -1,4 +1,4 @@
-package activitycontroller
+package activity
 
 import (
 	"github.com/gin-gonic/gin"
