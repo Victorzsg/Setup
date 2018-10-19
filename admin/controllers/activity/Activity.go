@@ -1,16 +1,29 @@
 package activity
 
 import (
+	"../../common/helper/responseHelper"
+	"../../common/returnCode"
+	"../../models"
+	"../../models/Activity"
 	"github.com/gin-gonic/gin"
-	"net/http"
+	"strings"
 )
 
-func GetList(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{
-		"code": 0,
-		"msg":  "ok",
-		"data": gin.H{
-			"user": 1,
-		},
-	})
+func List(c *gin.Context) {
+
+	activityIds := c.Query("ids")
+	if activityIds == "" {
+		responseHelper.Error(c, returnCode.ERR_PARAMS)
+		return
+	}
+
+	var activities []*Activity.Activity
+	idsSlice := strings.Split(activityIds, ",")
+	models.Orm.Where("id in (?)", idsSlice).Find(&activities)
+
+	responseHelper.OK(c, activities)
+}
+
+func Show(c *gin.Context) {
+
 }

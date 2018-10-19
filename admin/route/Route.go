@@ -9,5 +9,5 @@ import (
 func registerRouter(route *gin.Engine) {
 
 	route.GET("/users", user.Test)
-	route.GET("/activity", activity.GetList)
+	route.GET("/activity", activity.List)
 }

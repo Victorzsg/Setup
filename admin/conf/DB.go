@@ -1,6 +1,8 @@
 package conf
 
-import "strings"
+import (
+	"strings"
+)
 
 type DB struct {
 	MODE              string
@@ -34,11 +36,11 @@ var db = [...]DB{
 	{
 		//test environment
 		MODE:              "test",
-		DATABASE_HOST:     "127.0.0.1",
+		DATABASE_HOST:     "192.168.17.133",
 		DATABASE_PORT:     "3306",
 		DATABASE_USERNAME: "root",
-		DATABASE_PASSWORD: "root",
-		DATABASE_NAME:     "activity",
+		DATABASE_PASSWORD: "Zsg@631985789",
+		DATABASE_NAME:     "db_setup",
 
 		REDIS_HOST:     "127.0.0.1",
 		REDIS_PORT:     "6379",
@@ -60,6 +62,11 @@ var db = [...]DB{
 		REDIS_DB:       0,
 	},
 }
+
+const (
+	DefaultMaxOpenConns = 20 //数据库最大连接数
+	DefaultMaxIdleConns = 0  //数据最大空闲连接数
+)
 
 func GetDbConf(mode string) *DB {
 	ret := DB{}
